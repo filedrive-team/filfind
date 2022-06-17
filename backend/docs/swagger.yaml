@@ -1,0 +1,1346 @@
+definitions:
+  repo.Client:
+    properties:
+      address_id:
+        type: string
+      address_robust:
+        type: string
+      bandwidth:
+        type: string
+      data_cap:
+        type: number
+      location:
+        type: string
+      monthly_storage:
+        type: string
+      name:
+        type: string
+      service_requirement:
+        type: string
+      storage_capacity:
+        type: number
+      storage_deals:
+        type: integer
+      total_data_cap:
+        type: number
+      use_case:
+        type: string
+      used_data_cap:
+        type: number
+      verified_deals:
+        type: integer
+    type: object
+  repo.ClientHistoryDealStatsItem:
+    properties:
+      avg_price:
+        type: number
+      avg_verified_price:
+        type: number
+      data_cap:
+        type: number
+      first_deal_time:
+        type: integer
+      iso_code:
+        type: string
+      max_piece_size:
+        type: number
+      min_piece_size:
+        type: number
+      name:
+        type: string
+      owner:
+        type: string
+      provider:
+        type: string
+      quality_adj_power:
+        type: number
+      raw_power:
+        type: number
+      region:
+        type: string
+      reputation_score:
+        type: integer
+      retrieval_success_rate:
+        type: number
+      review_score:
+        type: number
+      reviews:
+        type: integer
+      storage_capacity:
+        type: number
+      storage_deals:
+        description: relevant client deal
+        type: integer
+      storage_success_rate:
+        type: number
+    type: object
+  repo.ClientInfo:
+    properties:
+      address_id:
+        type: string
+      bandwidth:
+        type: string
+      data_cap:
+        type: number
+      monthly_storage:
+        type: string
+      service_requirement:
+        type: string
+      storage_capacity:
+        type: number
+      storage_deals:
+        type: integer
+      total_data_cap:
+        type: number
+      use_case:
+        type: string
+      used_data_cap:
+        type: number
+      verified_deals:
+        type: integer
+    type: object
+  repo.ClientProfile:
+    properties:
+      address_id:
+        type: string
+      address_robust:
+        type: string
+      avatar:
+        type: string
+      contact_email:
+        type: string
+      description:
+        type: string
+      github:
+        type: string
+      location:
+        type: string
+      logo:
+        type: string
+      name:
+        type: string
+      slack:
+        type: string
+      twitter:
+        type: string
+      type:
+        type: string
+      uid:
+        type: string
+    type: object
+  repo.LoginUser:
+    properties:
+      access_token:
+        type: string
+      address:
+        type: string
+      address_id:
+        type: string
+      avatar:
+        type: string
+      client_id:
+        type: string
+      email:
+        type: string
+      location:
+        type: string
+      logo:
+        type: string
+      name:
+        type: string
+      refresh_token:
+        type: string
+      type:
+        type: string
+      uid:
+        type: string
+    type: object
+  repo.MetricsClientDetailItem:
+    properties:
+      client:
+        type: string
+      owners:
+        type: string
+      provider_num:
+        type: integer
+      providers:
+        type: string
+      register_time:
+        $ref: '#/definitions/types.UnixTime'
+    type: object
+  repo.MetricsClientOverview:
+    properties:
+      clients:
+        type: integer
+      clients_to_deal_sp:
+        type: integer
+      incr_clients:
+        type: integer
+      incr_clients_to_deal_sp_month:
+        type: integer
+      incr_target_clients:
+        type: integer
+      target_clients:
+        type: integer
+    type: object
+  repo.MetricsSpDetailItem:
+    properties:
+      new_client_num:
+        type: integer
+      new_clients:
+        type: string
+      owner:
+        type: string
+      providers:
+        type: string
+      register_time:
+        $ref: '#/definitions/types.UnixTime'
+    type: object
+  repo.MetricsSpOverview:
+    properties:
+      average_retrieval_success_ratio:
+        type: number
+      incr_average_retrieval_success_ratio:
+        type: number
+      incr_sps_to_deal_new_client_month:
+        type: integer
+      sps_to_deal_new_client:
+        type: integer
+    type: object
+  repo.Provider:
+    properties:
+      address:
+        type: string
+      available_deals:
+        type: string
+      bandwidth:
+        type: string
+      certification:
+        type: string
+      experience:
+        type: string
+      first_deal_time:
+        type: integer
+      is_member:
+        type: string
+      iso_code:
+        type: string
+      max_piece_size:
+        type: number
+      min_piece_size:
+        type: number
+      name:
+        type: string
+      owner:
+        type: string
+      parallel_deals:
+        type: string
+      price:
+        type: string
+      quality_adj_power:
+        type: number
+      raw_power:
+        type: number
+      region:
+        type: string
+      renewable_energy:
+        type: string
+      reputation_score:
+        type: integer
+      retrieval_success_rate:
+        type: number
+      review_score:
+        type: number
+      reviews:
+        type: integer
+      sealing_speed:
+        type: string
+      storage_deals:
+        type: integer
+      storage_success_rate:
+        type: number
+      verified_price:
+        type: string
+    type: object
+  repo.Review:
+    properties:
+      client:
+        type: string
+      content:
+        type: string
+      created_at:
+        $ref: '#/definitions/types.UnixTime'
+      provider:
+        type: string
+      score:
+        type: integer
+      title:
+        type: string
+    type: object
+  repo.SPOwnerProfile:
+    properties:
+      address_id:
+        type: string
+      address_robust:
+        type: string
+      avatar:
+        type: string
+      contact_email:
+        type: string
+      description:
+        type: string
+      github:
+        type: string
+      location:
+        type: string
+      logo:
+        type: string
+      name:
+        type: string
+      reputation_score:
+        type: number
+      review_score:
+        type: number
+      reviews:
+        type: integer
+      slack:
+        type: string
+      twitter:
+        type: string
+      type:
+        type: string
+      uid:
+        type: string
+    type: object
+  server.AdminUserParam:
+    properties:
+      name:
+        example: filfind
+        type: string
+      password:
+        example: filFind123
+        type: string
+    required:
+    - name
+    - password
+    type: object
+  server.ClientDetailParams:
+    properties:
+      bandwidth:
+        example: 300M
+        maxLength: 128
+        type: string
+      monthly_storage:
+        example: 10TiB
+        maxLength: 128
+        type: string
+      service_requirement:
+        example: More information about us.
+        maxLength: 1024
+        type: string
+      use_case:
+        example: Entertainment/Media/Science
+        maxLength: 128
+        type: string
+    type: object
+  server.EmailVcodeParam:
+    properties:
+      email:
+        example: test@example.com
+        type: string
+    required:
+    - email
+    type: object
+  server.MetricsOverview:
+    properties:
+      auto_filled_providers:
+        type: integer
+      average_accesses_daily:
+        type: number
+      incr_auto_filled_providers:
+        type: integer
+      incr_average_accesses_daily:
+        type: number
+      incr_internal_contacts:
+        type: integer
+      incr_registered_providers:
+        type: integer
+      incr_registered_sp_ratio:
+        type: number
+      incr_total_accesses:
+        type: integer
+      internal_contacts:
+        type: integer
+      registered_providers:
+        type: integer
+      registered_sp_ratio:
+        type: number
+      total_accesses:
+        type: integer
+    type: object
+  server.ModifyPasswordParam:
+    properties:
+      new_password:
+        example: Hello456
+        type: string
+      password:
+        example: Hello123
+        type: string
+    required:
+    - new_password
+    - password
+    type: object
+  server.ProfileParam:
+    properties:
+      avatar:
+        example: ""
+        maxLength: 1024
+        type: string
+      contact_email:
+        example: public@example.com
+        maxLength: 256
+        type: string
+      description:
+        example: More information about us.
+        maxLength: 2048
+        type: string
+      github:
+        example: ""
+        maxLength: 128
+        type: string
+      location:
+        example: Shanghai,China
+        maxLength: 128
+        type: string
+      logo:
+        example: ""
+        maxLength: 1024
+        type: string
+      name:
+        example: example name
+        maxLength: 128
+        type: string
+      slack:
+        example: ""
+        maxLength: 128
+        type: string
+      twitter:
+        example: ""
+        maxLength: 128
+        type: string
+    type: object
+  server.ProviderDetailParams:
+    properties:
+      address:
+        example: f01234
+        type: string
+      available_deals:
+        example: 10TiB/D
+        maxLength: 128
+        type: string
+      bandwidth:
+        example: 300M
+        maxLength: 128
+        type: string
+      certification:
+        example: PCI Compliance
+        maxLength: 128
+        type: string
+      experience:
+        example: Textile/Estuary
+        maxLength: 128
+        type: string
+      is_member:
+        enum:
+        - "Yes"
+        - "No"
+        example: "No"
+        type: string
+      parallel_deals:
+        example: "10"
+        maxLength: 128
+        type: string
+      renewable_energy:
+        example: 1MWh
+        maxLength: 128
+        type: string
+      sealing_speed:
+        example: 10TiB/D
+        maxLength: 128
+        type: string
+    type: object
+  server.ResetPwdParams:
+    properties:
+      email:
+        example: test@example.com
+        type: string
+      new_password:
+        example: Hello456
+        type: string
+      vcode:
+        example: "123456"
+        type: string
+    required:
+    - email
+    - new_password
+    - vcode
+    type: object
+  server.ReviewParams:
+    properties:
+      content:
+        example: Great. It's the ultimate experience.
+        maxLength: 1024
+        type: string
+      provider:
+        example: f01662887
+        type: string
+      score:
+        example: 5
+        maximum: 5
+        minimum: 0
+        type: integer
+      title:
+        example: Ultimate Experience
+        maxLength: 128
+        type: string
+    required:
+    - content
+    - provider
+    - score
+    - title
+    type: object
+  server.SignUpParam:
+    properties:
+      address:
+        description: 'example privateKey hex: 7b2254797065223a22736563703235366b31222c22507269766174654b6579223a22347179396744327177724f68764148305267667738624b346b52546e575535595337622f4338374435686f3d227d'
+        example: f1gxcq2s72oepgufqrkbblbwgnxosrkwn3jib3bmy
+        minLength: 3
+        type: string
+      email:
+        example: test@example.com
+        type: string
+      message:
+        description: |-
+          raw data:
+          Signature for filfind
+          f1gxcq2s72oepgufqrkbblbwgnxosrkwn3jib3bmy
+          2022-04-14T12:03:45.169Z
+          raw data hex: 5369676e617475726520666f722066696c66696e640d0a663167786371327337326f657067756671726b62626c6277676e786f73726b776e336a696233626d790d0a323032322d30342d31345431323a30333a34352e3136395a
+        example: 5369676e617475726520666f722066696c66696e640d0a663167786371327337326f657067756671726b62626c6277676e786f73726b776e336a696233626d790d0a323032322d30342d31345431323a30333a34352e3136395a
+        type: string
+      name:
+        example: hello
+        maxLength: 128
+        type: string
+      password:
+        example: Hello123
+        type: string
+      signature:
+        example: 01032aa043dea7ef185a3f5345d8bc9ee672b91584b090fca782e04f1bf36792211addd36fe6cb1e8829045d95175a48a3e431061362044bf830275829d9a7fe0d00
+        type: string
+      type:
+        enum:
+        - sp_owner
+        - data_client
+        example: sp_owner
+        type: string
+    required:
+    - address
+    - email
+    - message
+    - name
+    - password
+    - signature
+    - type
+    type: object
+  server.UserParam:
+    properties:
+      email:
+        example: test@example.com
+        type: string
+      password:
+        example: Hello123
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  types.UnixTime:
+    properties:
+      time.Time:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /admin/metrics/clientOverview:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.MetricsClientOverview'
+      summary: metrics client overview
+      tags:
+      - admin
+  /admin/metrics/clientToDealSpDetail:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.MetricsClientDetailItem'
+            type: array
+      summary: metrics client to deal sp detail
+      tags:
+      - admin
+  /admin/metrics/overview:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/server.MetricsOverview'
+      summary: metrics overview
+      tags:
+      - admin
+  /admin/metrics/spOverview:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.MetricsSpOverview'
+      summary: metrics sp overview
+      tags:
+      - admin
+  /admin/metrics/spToDealNewClientDetail:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.MetricsSpDetailItem'
+            type: array
+      summary: metrics sp to deal new client detail
+      tags:
+      - admin
+  /admin/user/modifyPassword:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: modify password param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ModifyPasswordParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Admin user modify password
+      tags:
+      - admin
+  /admin/userLogin:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: admin user param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.AdminUserParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.LoginUser'
+      summary: Admin user login
+      tags:
+      - admin
+  /chat/history:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Partner uid
+        in: query
+        name: partner
+        type: string
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: limit
+        type: integer
+      - description: Option, unix time(seconds). It returns last messages if you not
+          set.
+        in: query
+        name: before
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Get chat history
+      tags:
+      - chat
+  /client/detail:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: client detail param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ClientDetailParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: client modify detailed information
+      tags:
+      - client
+  /client/review:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: review param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ReviewParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Submit a review
+      tags:
+      - client
+  /clientDetail:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Client address id.
+        example: f01624861
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.ClientInfo'
+      summary: Get client detailed info
+      tags:
+      - public
+  /clientHistoryDealStats:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      - description: Client address id.
+        example: f01624861
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.ClientHistoryDealStatsItem'
+            type: array
+      summary: Get client statistics about history deals
+      tags:
+      - public
+  /clientProfile:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Client address id.
+        example: f01624861
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.ClientProfile'
+      summary: Get client profile
+      tags:
+      - public
+  /clientReviews:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      - description: Client address id.
+        example: f01624861
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.Review'
+            type: array
+      summary: Get client reviews
+      tags:
+      - public
+  /clients:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      - default: data_cap
+        description: 'Sorting option. Example: sort_by=data_cap'
+        enum:
+        - storage_deals
+        - storage_capacity
+        - total_data_cap
+        - used_data_cap
+        - data_cap
+        - verified_deals
+        in: query
+        name: sort_by
+        type: string
+      - default: desc
+        description: 'Option to order providers. Example: order=desc'
+        enum:
+        - asc
+        - desc
+        in: query
+        name: order
+        type: string
+      - description: 'Search client by keyword, support client id/name/location. Example:
+          f01234'
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.Client'
+            type: array
+      summary: Client list
+      tags:
+      - public
+  /provider/detail:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: provider detail param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ProviderDetailParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: SP owner modify SP detailed information
+      tags:
+      - provider
+  /providers:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      - default: reputation_score
+        description: 'Sorting option. Example: sort_by=reputation_score'
+        enum:
+        - reputation_score
+        - review_score
+        - storage_success_rate
+        - retrieval_success_rate
+        - price
+        - verified_price
+        - iso_code
+        - quality_adj_power
+        - storage_deals
+        in: query
+        name: sort_by
+        type: string
+      - default: desc
+        description: 'Option to order providers. Example: order=desc'
+        enum:
+        - asc
+        - desc
+        in: query
+        name: order
+        type: string
+      - default: all
+        description: 'Option to filter providers by registered.  Example: sps_status=all'
+        enum:
+        - all
+        - registered
+        - autofilled
+        in: query
+        name: sps_status
+        type: string
+      - default: all
+        description: 'Option to filter providers by region.  Example: region=Asia'
+        enum:
+        - all
+        - Asia
+        - Europe
+        - Africa
+        - Oceania
+        - South America
+        - North America
+        in: query
+        name: region
+        type: string
+      - description: 'Option to filter providers by raw_power_range(TiB) passed as
+          a string representation of a JSON object; when implementing, make sure the
+          parameter is URL-encoded to ensure safe transport.   Example: raw_power_range={''min'':''0'',''max'':''1024''}'
+        in: query
+        name: raw_power_range
+        type: object
+      - description: 'Option to filter providers by storage_success_rate_range passed
+          as a string representation of a JSON object; when implementing, make sure
+          the parameter is URL-encoded to ensure safe transport.   Example: storage_success_rate_range={''min'':''0.85'',''max'':''1''}'
+        in: query
+        name: storage_success_rate_range
+        type: object
+      - description: 'Option to filter providers by reputation_score_range passed
+          as a string representation of a JSON object; when implementing, make sure
+          the parameter is URL-encoded to ensure safe transport.   Example: reputation_score_range={''min'':''90'',''max'':''100''}'
+        in: query
+        name: reputation_score_range
+        type: object
+      - description: 'Option to filter providers by review_score_range passed as a
+          string representation of a JSON object; when implementing, make sure the
+          parameter is URL-encoded to ensure safe transport.   Example: review_score_range={''min'':''4'',''max'':''5''}'
+        in: query
+        name: review_score_range
+        type: object
+      - description: 'Search providers by keyword, support miner id/name/location.
+          Example: f01234'
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.Provider'
+            type: array
+      summary: Storage provider list
+      tags:
+      - public
+  /spOwnerProfile:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Owner address id.
+        example: f01694606
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.SPOwnerProfile'
+      summary: Get SP owner profile
+      tags:
+      - public
+  /spOwnerReviews:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Which page to return
+        in: query
+        name: page
+        type: integer
+      - description: Max records to return
+        in: query
+        maximum: 100
+        name: page_size
+        type: integer
+      - description: Owner address id.
+        example: f01694606
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.Review'
+            type: array
+      summary: Get reviews by SP owner
+      tags:
+      - public
+  /spServiceDetail:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Owner address id.
+        example: f01694606
+        in: query
+        name: address_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/repo.Provider'
+            type: array
+      summary: Get SP service detail list by owner
+      tags:
+      - public
+  /user/modifyPassword:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: modify password param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ModifyPasswordParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: User modify password
+      tags:
+      - user
+  /user/profile:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt access token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: modify profile param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ProfileParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: User modify profile
+      tags:
+      - user
+  /user/token:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: Bearer YOUR_JWT
+        description: jwt refresh token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: access token
+          schema:
+            type: string
+      summary: Generate an access token
+      tags:
+      - user
+  /userLogin:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: user param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.UserParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.LoginUser'
+      summary: User login
+      tags:
+      - public
+  /userResetPwd:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: reset password param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.ResetPwdParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: User reset password
+      tags:
+      - public
+  /userSignUp:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: sign up param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.SignUpParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/repo.LoginUser'
+      summary: User sign up
+      tags:
+      - public
+  /vcodeByEmailToResetPwd:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: user email param
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/server.EmailVcodeParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Send a verification code by email to reset the password
+      tags:
+      - public
+  /ws:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: websocket api
+      tags:
+      - ws
+swagger: "2.0"
