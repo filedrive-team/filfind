@@ -1,0 +1,78 @@
+.chatLeftWrap {
+  height: 100%;
+  width: 240px;
+  background: linear-gradient(180deg, #225bf5, #8eaafa);
+  display: flex;
+  flex-direction: column;
+
+  .listWrap {
+    flex: 1;
+    overflow: auto;
+  }
+
+  :global {
+
+    .ant-menu-inline {
+      border: none;
+    }
+
+    .ant-menu {
+      background: transparent;
+    }
+
+    .ant-menu-item {
+      height: 60px;
+      margin: 0px;
+      border-bottom: 1px solid var(--color-F1F5F9-20);
+      padding: 0px 20px 0px 14px !important;
+      margin: 0px;
+      background: transparent !important;
+
+      .ant-menu-title-content {
+        display: flex !important;
+        align-items: center;
+        height: auto;
+        line-height: normal;
+
+        .friend-avatar {
+          height: 40px;
+          width: 40px;
+          border-radius: 20px;
+          background: yellow;
+          margin-right: 5px;
+        }
+
+        .content {
+          flex: 1;
+          font-size: 12px;
+
+          .name {
+            color: var(--color-FFFFFF);
+          }
+
+          .speak {
+            color: var(--color-FFFFFF-60);
+          }
+        }
+
+        .count {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 15px;
+          width: 15px;
+          margin-left: 5px;
+          color: var(--color-336AFA);
+          border-radius: 7.5px;
+          background: var(--color-FFFFFF);
+        }
+      }
+    }
+
+    .ant-menu-item::after {
+      border-right: 2px solid var(--color-FFFFFF-80);
+    }
+
+
+  }
+}

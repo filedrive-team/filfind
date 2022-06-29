@@ -1,0 +1,61 @@
+.userInfoWrap {
+
+  padding: 0px 14px;
+
+  .userInfoLogo {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+
+    .avatar {
+      height: 44px;
+      width: 44px;
+      background: gray;
+      border: 1px solid var(--color-FFDE66);
+      border-radius: 22px;
+    }
+
+    .icon {
+      display: flex;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      & > :last-child {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .userInfoText {
+    color: var(--color-FFFFFF);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: pre-wrap;
+  }
+
+  :global {
+    .ant-input-affix-wrapper {
+      background: var(--color-FFFFFF-20);
+      border: 1px solid var(--color-FFFFFF-80);
+      border-radius: 10px;
+      height: 32px;
+    }
+
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+      border: 1px solid var(--color-FFFFFF-80);
+
+    }
+
+    .ant-input {
+      background: transparent;
+    }
+
+  }
+}
+

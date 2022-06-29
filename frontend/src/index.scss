@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  background: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --text-color-white: #fff;
+  --text--color-94A3B8: #94a3b8;
+  --text-color-475569: #475569;
+  --text-color-1B6DF3: #1b6df3;
+  --text-color-030201: #030201;
+
+  --color-red: #ec4747;
+  --color-gree: #10b981;
+  --color-blue: #336afa;
+  --color-white: #fff;
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-CDDFF4-78: rgba(205, 223, 244, 0.78);
+  --color-94A3B8: #94a3b8;
+  --color-1B6DF3: #1b6df3;
+  --color-1B6DF3-50: rgba(27, 109, 243, 0.5);
+  --color-F7FAFF:#F7FAFF;
+
+  --divid-color-F1F5F9: #f1f5f9;
+  --border-color-E2E8F0: #e2e8f0;
+  --shadow-color-0F172A: #0f172a;
+}
+
+$directions-simple: t r b l;
+$directions-real: top right bottom left;
+@each $direction in $directions-simple {
+  @for $value from 1 through 400 {
+    $i: index($directions-simple, $direction);
+    $obj: nth($directions-real, $i);
+    .m#{$direction}-#{$value} {
+      margin-#{$obj}: #{$value}px;
+    }
+    .p#{$direction}-#{$value} {
+      padding-#{$obj}: #{$value}px;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-j-center {
+  justify-content: center;
+}
+
+.flex-j-end {
+  justify-content: flex-end;
+}
+
+.flex-a-center {
+  align-items: center;
+}
+
+.flex-a-end {
+  align-items: flex-end;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Inter-normal";
+  src: url("./assets/fonts/Inter-Regular-9.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-bold";
+  src: url("./assets/fonts/Inter-Bold-4.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("./assets/fonts/Inter-Medium-8.otf") format("truetype");
+}

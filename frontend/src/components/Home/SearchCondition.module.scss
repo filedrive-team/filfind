@@ -1,0 +1,47 @@
+.searchCondition {
+    .statusRow {
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .statusRow,
+    .regionRow {
+      display: flex;
+      align-items: baseline;
+      .label {
+        width: 130px;
+        padding-right: 26px;
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 500;
+        color: #475569;
+        line-height: 18px;
+        text-transform: capitalize;
+        text-align: right;
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        height: 90px;
+        align-items: center;
+        .item {
+          font-size: 14px;
+          font-family: PingFangSC, PingFangSC-Medium;
+          font-weight: 500;
+          color: #475569;
+          line-height: 18px;
+          margin-right: 80px;
+          padding: 7px 12px;
+          cursor: pointer;
+          &:last-child{
+            margin-right: 0;
+          }
+          &.active {
+            background-color: var(--color-0064EF);
+            color: #fff;
+            background: var(--color-0064EF);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  

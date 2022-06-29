@@ -1,0 +1,133 @@
+.home {
+  width: 100%;
+  position: relative;
+  .bgLeft {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .bgRight {
+    width: 26%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .top {
+    padding-top: 20vh;
+    background: linear-gradient(
+      0deg,
+      rgba(251, 253, 255, 0) 0%,
+      #e2efff 33%,
+      rgba(213, 231, 255, 0.5)
+    );
+    .filterWrap {
+      width: 790px;
+      margin: 0 auto 150px;
+      position: relative;
+      z-index: 9;
+    }
+    .searchConditionWrap {
+      position: relative;
+      z-index: 9;
+      width: var(--contentWidth);
+      box-sizing: border-box;
+      padding: 0 30px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px -3px rgba(15, 23, 42, 0.07);
+    }
+  }
+
+  .listWrap {
+    width: var(--contentWidth);
+    margin: 40px auto;
+    position: relative;
+    z-index: 9;
+  }
+}
+
+:global{
+  .ant-popover{
+    .filterCondition{
+      .item{
+        display: flex;
+        align-items: center;
+        color: #64748b;
+        font-size: 12px;
+        margin-bottom: 10px;
+        .from{
+          width: 150px;
+          font-family: PingFangSC, PingFangSC-Regular;
+          font-weight: 400;
+          text-align: left;
+          line-height: 17px;
+        }
+        .ant-input{
+          width: 60px;
+          height: 28px;
+        }
+        .to{
+          margin: 0 10px;
+        }
+        .unit{
+          margin-left: 10px;
+        }
+      }
+      .action{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10px;
+        .clear{
+          width: 80px;
+          height: 28px;
+          background: rgba(255,255,255,0.20);
+          border: 1px solid var(--color-0064EF);
+          border-radius: 4px;
+          box-shadow: 0px 4px 10px -2px rgba(86,126,238,0.10); 
+          backdrop-filter: blur(10px);
+          text-align: center;
+          line-height: 28px;
+          font-size: 12px;
+          font-family: Inter, Inter-Regular;
+          font-weight: 400;
+          color: var(--color-0064EF);
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        .confirm{
+          width: 80px;
+          height: 28px;
+          background: var(--color-0064EF);
+          border: 1px solid var(--color-0064EF);
+          border-radius: 4px;
+          box-shadow: 0px 4px 10px -2px rgba(86,126,238,0.10); 
+          backdrop-filter: blur(10px);
+          text-align: center;
+          line-height: 28px;
+          font-size: 12px;
+          font-family: Inter, Inter-Regular;
+          font-weight: 400;
+          color: #ffffff;
+          cursor: pointer;
+        }
+      }
+    }
+  }  
+}
+
+
+:global{
+  .ant-pagination{
+    padding: 0 10px;
+    text-align: right;
+  }
+}
