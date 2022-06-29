@@ -166,8 +166,8 @@ class ChatStore {
       for (let j = i + 1; j < len; j++) {
         if (data[i].uid === data[j].uid) {
           data.splice(j, 1);
-          len--; // 减少循环次数提高性能
-          j--; // 保证j的值自加后不变
+          len--;
+          j--;
         }
       }
     }

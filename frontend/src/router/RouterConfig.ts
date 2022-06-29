@@ -11,6 +11,7 @@ enum RouterPath {
   client = '/client/:id',
   clientList = '/clientList',
   changePassword = '/changePassword',
+  resetPassword = '/resetPassword',
 }
 
 const Routes: RouteModel[] = [
@@ -49,6 +50,12 @@ const Routes: RouteModel[] = [
     path: RouterPath.auth,
     auth: false,
     component: lazy(() => import('@/pages/Auth')),
+  },
+  {
+    name: 'resetPassword',
+    path: RouterPath.resetPassword,
+    auth: false,
+    component: lazy(() => import('@/pages/ResetPassword')),
   },
   {
     name: 'signUp',

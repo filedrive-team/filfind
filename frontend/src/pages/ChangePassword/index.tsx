@@ -19,7 +19,6 @@ const ChangePassword = () => {
         password: changePasswordStore.recentPassword.value,
       })
       .then((res) => {
-        message.success('修改密码成功！');
         setTimeout(() => {
           window.location.href = `/auth`;
         }, 3000);
@@ -52,7 +51,7 @@ const ChangePassword = () => {
                         value: _value,
                         message: valid
                           ? ''
-                          : 'At least 8 characters with a mix of letters, numbers & symbols',
+                          : 'At least 8 characters with a mix of letters, numbers',
                       });
                     } else {
                       changePasswordStore.SET_RECENTPASSWORD({
@@ -72,7 +71,7 @@ const ChangePassword = () => {
                 <Input.Password
                   value={changePasswordStore.newPassword.value}
                   type="password"
-                  placeholder="At least 8 characters with a mix of letters, numbers & symbols"
+                  placeholder="At least 8 characters with a mix of letters, numbers"
                   onChange={(event) => {
                     const _value = event.target.value;
 
@@ -83,7 +82,7 @@ const ChangePassword = () => {
                         value: _value,
                         message: valid
                           ? ''
-                          : 'At least 8 characters with a mix of letters, numbers & symbols',
+                          : 'At least 8 characters with a mix of letters, numbers',
                       });
                     } else {
                       changePasswordStore.SET_NEWPASSWORD({
@@ -105,7 +104,7 @@ const ChangePassword = () => {
                 <Input.Password
                   value={changePasswordStore.confirmPassword.value}
                   type="password"
-                  placeholder="At least 8 characters with a mix of letters, numbers & symbols"
+                  placeholder="At least 8 characters with a mix of letters, numbers"
                   onChange={(event) => {
                     const _value = event.target.value;
                     if (_value) {

@@ -17,6 +17,16 @@ export interface LoginParam {
   password: string;
 }
 
+export interface ResetPwdParam {
+  email: string;
+  new_password: string;
+  vcode: string;
+}
+
+export interface VcodeByEmailToResetPwdParam {
+  email: string;
+}
+
 export interface UserModifyPasswordParam {
   new_password: string;
   password: string;

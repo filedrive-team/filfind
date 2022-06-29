@@ -20,13 +20,10 @@ const PullRefresh = (top: string, content: string) => {
         var resutl = getpostion(PMoveY, PstartY);
         switch (resutl) {
           case 0:
-            console.log('无操作');
             break;
           case 1:
-            console.log('向上');
             break;
           case 2:
-            console.log('向下');
             if (PMoveY - PstartY > 0) {
               if (PMoveY - PstartY >= 100) {
                 // @ts-ignore
@@ -52,26 +49,23 @@ const PullRefresh = (top: string, content: string) => {
       var resutl = getpostion(PMoveY, PstartY);
       switch (resutl) {
         case 0:
-          console.log('无操作');
           break;
         case 1:
-          console.log('向上');
           break;
         case 2:
-          console.log('向下');
           break;
       }
     };
 
     function getpostion(PMoveY, PstartY) {
       if (PMoveY - PstartY == 0) {
-        return 0; //无操作
+        return 0;
       }
       if (PMoveY - PstartY < 0) {
-        return 1; //向上
+        return 1;
       }
       if (PMoveY - PstartY > 0) {
-        return 2; //向下
+        return 2;
       }
     }
   };
