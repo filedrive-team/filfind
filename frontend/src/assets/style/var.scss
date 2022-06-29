@@ -1,0 +1,71 @@
+:root {
+  --color-0064EF: #0064ef;
+  --color-0064EF-60:rgba(0,100,239,0.60);
+  --color-FF4D4F: #ff4d4f;
+  --color-FFDE66: #FFDE66;
+  --color-FFFFFF: #FFFFFF;
+  --color-336AFA: #336AFA;
+  --color-FFFFFF-20: rgba(255, 255, 255, 0.20);
+  --color-FFFFFF-80: rgba(255, 255, 255, 0.80);
+  --color-FFFFFF-60: rgba(255, 255, 255, 0.60);
+  --color-F1F5F9-20: rgba(71, 85, 105, 0.2);
+  --color-475569: #475569;
+  --color-475569-20: rgb(71, 85, 105, 0.20);
+
+  --color-f5fcff-4:rgba(245,252,255,0.04);
+  --color-f7fcff-47:rgba(247,252,255,47);
+  --color-dcedfb-96:rgba(220,237,251,96);
+
+  --color-F5F8FF: #F5F8FF;
+  --color-F3F5F7: #F3F5F7;
+  --color-225BF5: #225BF5;
+  --color-8EAAFA: #8EAAFA;
+  --color-64748B: #64748B;
+  --color-2B2B2B: #2B2B2B;
+  --color-1B6Df3:#1B6DF3;
+  --color-2b2b2b:#2B2B2B;
+}
+
+$directions-simple: t r b l;
+$directions-real: top right bottom left;
+@each $direction in $directions-simple {
+  @for $value from 1 through 400 {
+    $i: index($directions-simple, $direction);
+    $obj: nth($directions-real, $i);
+    .m#{$direction}-#{$value} {
+      margin-#{$obj}: #{$value}px;
+    }
+    .p#{$direction}-#{$value} {
+      padding-#{$obj}: #{$value}px;
+    }
+
+    body.mobile {
+      .m#{$direction}-#{$value} {
+        margin-#{$obj}: #{$value}Px;
+      }
+
+      .p#{$direction}-#{$value} {
+        padding-#{$obj}: #{$value}Px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1439px) {
+  :root {
+    --contentWidth: 90%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --contentWidth: 1280px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  :root {
+    --contentWidth: 1600px;
+  }
+}

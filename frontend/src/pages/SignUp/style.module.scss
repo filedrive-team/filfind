@@ -1,0 +1,283 @@
+.sign-up {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(167deg,var(--color-f5fcff-4), var(--color-f7fcff-47), var(--color-dcedfb-96));
+  .headerContent {
+    width: 100%;
+    padding: 20px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .logo {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        flex-shrink: 0;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .menuList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .menuItem {
+          font-size: 14px;
+          color: #475569;
+          margin-left: 30px;
+          cursor: pointer;
+          &.active{
+            color: var(--color-1B6DF3);
+          }
+        }
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      .signIn{
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 500;
+        text-align: left;
+        color: var(--text-color-475569);
+        line-height: 14px;
+        margin-right: 30px;
+        cursor: pointer;
+      }
+      .signUp{
+        height: 36px;
+        line-height: 36px;
+        background: var(--color-0064EF);
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 500;
+        text-align: left;
+        color: var(--text-color-white);
+        padding: 0 15px;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+
+  .sign-up_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 260px;
+    flex:1;
+    
+    .bgWrap{
+      flex-shrink: 1;
+      flex: 1;
+      margin-right: 60px;
+      img {
+        width: 100%;
+        max-width: 1069px;
+      }
+    }
+
+    .form {
+      flex-shrink: 0;
+      width: 532px;
+      overflow: auto;
+      padding: 46px 45px;
+      background: var(--color-white-50);
+      border: 1px solid var(--text-color-white);
+      border-radius: 30px;
+      box-shadow: 0 1px 14px 0 rgba(205, 223, 244, 0.78);
+      backdrop-filter: blur(4px);
+
+      .title {
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: Inter, Inter-Bold, serif;
+        font-weight: 700;
+        text-align: left;
+        color: var(--text-color-030201);
+        line-height: 34px;
+      }
+
+      .step {
+        position: relative;
+        left: -66px;
+        width: 300px;
+        margin-bottom: 29px;
+      }
+
+      .description {
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Medium, serif;
+        font-weight: 400;
+        text-align: left;
+        line-height: 18px;
+        color: var(--text--color-94A3B8);
+
+        .description__title {
+          font-weight: 900;
+        }
+      }
+
+      .agreement {
+        display: block;
+        height: 40px;
+        font-size: 12px;
+        font-family: PingFangSC, PingFangSC-Regular, serif;
+        font-weight: 400;
+        text-align: left;
+        color: var(--text--color-94A3B8);
+        line-height: 20px;
+      }
+
+      .code {
+        textarea {
+          width: 440px;
+          height: 102px;
+          background: var(--color-white);
+          border: 1px solid var(--color-94A3B8);
+          border-radius: 10px;
+          opacity: 0.5;
+        }
+
+        span {
+          position: absolute;
+          top: -28px;
+          right: 0;
+          height: 14px;
+          font-size: 14px;
+          font-family: PingFangSC, PingFangSC-Regular, serif;
+          font-weight: 400;
+          text-align: left;
+          color: var(--color-1B6DF3);
+          line-height: 14px;
+        }
+      }
+
+      #baseInfo {
+        .link {
+          display: block;
+          width: 100%;
+          height: 16px;
+          font-size: 16px;
+          font-weight: 600;
+          font-family: PingFangSC, PingFangSC-Regular, serif;
+          text-align: center;
+          line-height: 16px;
+          color: var(--text-color-1B6DF3);
+        }
+      }
+    }
+  }
+  
+
+  :global {
+    .ant-steps{
+      .ant-steps-item{
+        .ant-steps-item-container{
+          .ant-steps-item-icon{
+            .ant-steps-icon{
+              width: 14px;
+              height: 14px;
+              border: 1.13px solid var(--color-1B6DF3-50);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top:-3px;
+              .ant-steps-icon-dot{
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                background: var(--color-1B6DF3);
+              }
+            }
+          }
+          .ant-steps-item-content{
+            .ant-steps-item-title{
+              font-size: 10px;
+              font-family: PingFangSC, PingFangSC-Regular, serif;
+              font-weight: 400;
+              text-align: left;
+              line-height: 14px;
+              color: var(--text--color-94A3B8);
+            }
+          }
+        }
+      }
+    }
+
+    .ant-steps-item {
+      &:first-child {
+        .ant-steps-item-title {
+          position: relative;
+          left: 18px;
+        }
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 25px;
+
+      &:nth-last-of-type(2) {
+        margin-bottom: 20px;
+      }
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+
+        .ant-btn {
+          width: 100%;
+          height: 45px;
+          background: var(--color-1B6DF3);
+          border-radius: 10px;
+          color: var(--text-color-white);
+
+          &[disabled] {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .ant-form-item-label {
+        height: 14px;
+        padding-bottom: 12px;
+        line-height: 14px;
+        flex: 1;
+
+        .ant-form-item-required {
+          font-size: 14px;
+          font-family: PingFangSC, PingFangSC-Medium, serif;
+          font-weight: 500;
+          text-align: left;
+          color: var(--text-color-475569);
+          line-height: 14px;
+        }
+      }
+
+      .ant-form-item-control {
+        .ant-form-item-control-input-content > .ant-input {
+          height: 45px;
+          border: 1px solid var(--color-1B6DF3-50);
+          border-radius: 10px;
+          opacity: 0.5;
+        }
+
+        .ant-input-affix-wrapper {
+          height: 45px;
+          border: 1px solid var(--color-1B6DF3-50);
+          border-radius: 10px;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
