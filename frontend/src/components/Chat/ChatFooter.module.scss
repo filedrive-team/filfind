@@ -1,0 +1,23 @@
+.chatFooter {
+  display: flex;
+  align-items: center;
+  background: var(--color-F5F8FF);
+  box-shadow: 0px 4px 10px 0px rgba(71, 85, 105, 0.20);
+  padding: 0px 20px;
+
+  :global {
+    .ant-input {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .sendButton {
+    cursor: not-allowed;
+  }
+
+  .sendButton.allow {
+    cursor: pointer;
+  }
+}

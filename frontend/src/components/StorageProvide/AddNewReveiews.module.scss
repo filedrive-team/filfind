@@ -1,0 +1,104 @@
+.addNewReveiews {
+    .title {
+      position: relative;
+      font-size: 20px;
+      font-family: PingFangSC, PingFangSC-Semibold;
+      font-weight: 600;
+      text-align: left;
+      color: #2b2b2b;
+      line-height: 20px;
+      padding-left: 15px;
+      margin-bottom: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 20px;
+        background-color: #336afa;
+        border-radius: 3px;
+      }
+    }
+    .content {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 15px -3px rgba(15, 23, 42, 0.08);
+      padding: 30px;
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .sorce {
+          display: flex;
+          align-items: baseline;
+          .rateLabel {
+            font-size: 14px;
+            font-family: PingFangSC, PingFangSC-Regular;
+            font-weight: 400;
+            text-align: left;
+            color: #64748b;
+            line-height: 31px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .label {
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+        text-align: left;
+        color: #64748b;
+        line-height: 20px;
+        margin-bottom: 2px;
+      }
+      .inputRow {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        :global {
+          .ant-input {
+            width: 190px;
+            margin-bottom: 0;
+          }
+        }
+      }
+      :global {
+        .ant-input {
+          margin-bottom: 20px;
+        }
+      }
+      .action {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        :global{
+          .ant-btn{
+            width: 120px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            justify-content: center;
+            border-radius: 10px;
+          } 
+          .ant-btn-default{
+            color: var(--color-0064EF);
+            border: 1px solid rgba(0, 100, 239, 0.6);
+            margin-right: 10px;
+          }
+          .ant-btn-primary{
+            background: var(--color-0064EF);
+          }
+          .ant-btn-primary[disabled]{
+            color: #ffffff;
+          }
+        }
+        
+      }
+    }
+  }
+  
