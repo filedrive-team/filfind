@@ -1,0 +1,63 @@
+.chatWrap {
+  position: fixed;
+  width: 700px;
+  height: 550px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--color-FFFFFF);
+  z-index: 1000;
+  bottom: 100px;
+  right: 20px;
+  left: auto;
+
+  opacity: 0;
+  transform: translateY(4px) translateZ(0px);
+}
+
+.chatWrap.hidden {
+  //pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px) translateZ(0px);
+}
+
+.chatWrap.show {
+  animation: show;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.chatContent {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  .chatSide {
+    background: blue;
+    width: 240px;
+    height: 100%;
+    z-index: 100000;
+  }
+
+  .chatRight {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+
+    .dialogContent {
+      flex: auto;
+      overflow: auto;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(10px) translateZ(0px);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,157 @@
+.info {
+    padding: 47px 70px 40px;
+    .top{
+      display: flex;
+      justify-content: space-between;
+      .editRow{
+        display: flex;
+        .editWrap{
+          margin-left: 30px;
+        }
+        .avatarWrap{
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .editWrap{
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .imageWrap {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 30px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    
+    .content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+  
+      .iconTextlist {
+        display: flex;
+        .item {
+          display: flex;
+          align-items: center;
+          margin-right: 40px;
+          &:last-child {
+            margin-right: 0;
+          }
+          .iconWrap {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .text {
+            font-size: 14px;
+            font-family: PingFangSC, PingFangSC-Regular;
+            font-weight: 400;
+            color: #64748b;
+            line-height: 20px;
+          }
+        }
+      }
+      .left {
+        width: 683px;
+        .title,
+        .subTitle {
+          font-size: 20px;
+          font-family: PingFangSC, PingFangSC-Medium;
+          font-weight: 500;
+          color: #2b2b2b;
+          text-align: left;
+          line-height: 20px;
+        }
+        .titleChat{
+          display: flex;
+          align-items: flex-start;
+          .title{
+            margin-bottom: 8px;
+          }
+          .addChat{
+            padding-left: 15px;
+            img{
+              width: 37px;
+              height: 32px;
+              cursor: pointer;
+            }
+          }
+        }
+        .describe {
+          font-size: 14px;
+          font-family: PingFangSC, PingFangSC-Regular;
+          font-weight: 400;
+          text-align: left;
+          color: #64748b;
+          line-height: 20px;
+          padding: 15px 0 50px;
+          text-align: left;
+        }
+      }
+      .right {
+        .list {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-bottom: 70px;
+          .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &:nth-child(2) {
+              position: relative;
+              padding: 0 80px;
+              &::after,
+              &::before {
+                content: "";
+                width: 1px;
+                height: 35px;
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              &::after {
+                left: 40px;
+              }
+              &::before {
+                right: 40px;
+              }
+            }
+            .iconWrap {
+              width: 24px;
+              height: 24px;
+              margin-bottom: 10px;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .count {
+              font-size: 20px;
+              font-family: PingFangSC, PingFangSC-Regular;
+              font-weight: 400;
+              text-align: left;
+              color: #2b2b2b;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
