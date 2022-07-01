@@ -147,7 +147,7 @@ const Auth = () => {
               }}
             </Form.Item>
             <Form.Item wrapperCol={{ span: 24 }} noStyle>
-              <Link className={styles.link} to="/changePassword" replace>
+              <Link className={styles.link} to="/resetPassword" replace>
                 Forget password？
               </Link>
             </Form.Item>

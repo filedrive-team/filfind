@@ -17,7 +17,7 @@ const ChatRecordList = (props: IProps) => {
     <div className={classNames([style.list_area])}>
       <div>
         <button className={style.load_more} onClick={props.onEarlier}>
-          加载更多···
+          Load more···
         </button>
       </div>
       {props.data.map((bubble, index) => (

@@ -27,7 +27,6 @@ const removePending = (config: AxiosRequestConfig) => {
       JSON.stringify(list.params) === JSON.stringify(config.params) &&
       JSON.stringify(list.data) === JSON.stringify(config.data)
     ) {
-      // 从数组中移除记录
       pending.splice(item, 1);
     }
   }

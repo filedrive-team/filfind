@@ -16,12 +16,30 @@ import {
   ProviderDetailParam,
   ChatHistoryParam,
   clientsParam,
+  ResetPwdParam,
+  VcodeByEmailToResetPwdParam,
 } from '@/api/modules/interface';
 import { ProfileResponse } from '@/models/types';
 
 export function postUserSignUp(data: SignUpParam): Promise<any> {
   return postReq({
     url: 'api/v1/userSignUp',
+    data: data,
+  });
+}
+
+export function postUserResetPwd(data: ResetPwdParam): Promise<any> {
+  return postReq({
+    url: 'api/v1/userResetPwd',
+    data: data,
+  });
+}
+
+export function postVcodeByEmailToResetPwd(
+  data: VcodeByEmailToResetPwdParam,
+): Promise<any> {
+  return postReq({
+    url: 'api/v1/vcodeByEmailToResetPwd',
     data: data,
   });
 }
